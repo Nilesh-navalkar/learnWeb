@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: rgb(16, 138, 57);
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+            position: sticky;
+        }
+
+        nav{
+            background-color: #333;
+            overflow: hidden;
+        }
+        a{
+            float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+        }
+        li{
+            list-style-type: none;
+            display :inline;
+        }
+        li :hover {
+            background-color: gray;
+
+        }
+        footer{
+            background-color: gray;
+
+            float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+            position:fixed;
+            bottom:0;
+            width: 100%;
+        }
+
+
+        .this {
+            margin-left:40%;
+            margin-right:40%;
+            
+        }
+        input,textarea{
+            float: right;
+        }
+        label{
+            float: left;
+        }
+    </style>
+    <title>Home page</title>
+
+</head>
+<body>
+    <header> 
+        <h1>home page</h1>
+    </header>
+    <nav>
+        <div> 
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">About us</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div align="center" class="this">
+        <form>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" required placeholder="enter name" id="name"><br><br>
+
+            <label for="pass">Password:</label>
+            <input type="password" required placeholder="enter password" id="pass"><br><br>
+
+            <label for="em">Email:</label>
+            <input type="email" required placeholder="enter email" id="em"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" required placeholder="enter Phone no." id="phone"><br><br>
+
+            <label for="dob">Dob:</label>
+            <input type="date" id="dob"><br><br>
+            
+
+            <label for="add">Adderss:</label>
+            <textarea cols="20" rows="5" id="add"></textarea><br><br><br><br><br>
+            <label for="loc">Location:</label>
+            <select id="loc">
+                <option value="">choose city</option>
+                <option value="1">Mumbai</option>
+                <option value="2">Chennai</option>
+                <option value="3">Kolkata</option>
+            </select><br><br>
+            <label for="check">I have read the terms and conditions:</label>
+            <input type="checkbox" required><br><br>
+            <button>submit</button>
+
+        </form>
+    </div>
+    <footer> 
+            <p>copyright @ Nilesh Navalkar </p>
+    </footer>
+</body>
+</html>

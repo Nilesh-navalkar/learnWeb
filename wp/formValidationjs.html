@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>exp5</title>
+    <style>
+        *{
+            margin: 10px 10px;
+        }
+    </style>
+  </head>
+  <body>
+      <div style="align-content:center">
+        <form onsubmit="return false" style="background-color: rgb(233, 233, 248); max-width: 400px;overflow: hidden;border: blue solid 1px;">
+            <h5 style="color:blue;text-align: center;"><u>Submit Form</u></h5>
+            <hr style="border:blue solid 1px ;">
+
+            <div class="row">
+            <label for="un" class="col-5">Username</label>
+            <input type="text" id="un" class="col-auto">
+            </div>
+            
+            <div class="row">
+                <label for="pass" class="col-5">Password</label>
+                <input type="password" id="pass" class="col-auto">
+            </div>
+
+            <div class="row">
+                <label for="cpass" class="col-5">Confirm Password</label>
+                <input type="password" id="cpass" class="col-auto">
+            </div>
+
+            <div class="row">
+                <label for="fn" class="col-5">Firstname</label>
+                <input type="text" id="fn" class="col-auto">
+            </div>
+
+            <div class="row">
+                <label for="ln" class="col-5">Lasttname</label>
+                <input type="text" id="ln" class="col-auto">
+            </div>
+
+            <div class="row">
+                <label for="age" class="col-5">Age</label>
+                <input type="text" id="age" class="col-auto">
+            </div>
+            
+            <div class="row">
+                <label for="em" class="col-5">Email</label>
+                <input type="text" id="em" class="col-auto">
+            </div>
+
+            
+            <div class="row">
+                <label for="phone" class="col-5">Phone</label>
+                <input type="text" id="phone" class="col-auto">
+            </div>
+
+            
+            <div class="row">
+                <label for="fax" class="col-5">Fax</label>
+                <input type="text" id="fax" class="col-auto">
+            </div>
+
+            
+            <div class="row">
+                <label for="dob" class="col-5">Date of birth</label>
+                <input type="text" id="dob" class="col-auto">
+            </div>
+
+            
+            <div class="row">
+                <label for="web" class="col-5">Website</label>
+                <input type="text" id="web" class="col-auto">
+            </div>
+
+            <div class="row">
+                <label for="country" class="col-5">Country</label>
+                <select id="country" class="col-auto">
+                    <option value="">--select--</option>
+                    <option value="1">India</option>
+                    <option value="2">China</option>
+                    <option value="3">Japan</option>
+                    <option value="4">USA</option>
+                    <option value="5">UK</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="gender" class="col-5">gender</label>
+                <div class="col-auto">
+                <input type="radio"  name="rdio" id="r1" ><label for="r1" >Male</label>
+                <input type="radio" name="rdio" id="r2" ><label for="r2" >Female</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="check" class="col-5">Disclaimer</label>
+                <input type="checkbox" id="check" class="col-auto"  >
+            </div>
+
+            <div class="row">
+                <div class="col-3"></div>
+                <button class="col-4" onclick="validate()"  >Submit Form</button>
+            </div>
+
+        </form>
+
+
+      </div>
+      <script>
+
+          function validate()
+          {
+              let u=document.getElementById("un").value;
+              let p=document.getElementById("pass").value;
+              let cp=document.getElementById("cpass").value;
+              let fn=document.getElementById("fn").value;
+              let age=document.getElementById("age").value;
+              let em=document.getElementById("em").value;
+              let phone=document.getElementById("phone").value;
+              let dob=document.getElementById("dob").value;
+              let web=document.getElementById("web").value;
+              let country=document.getElementById("country").value;
+              let check=document.getElementById("check");
+              let gmale=document.getElementById("r1");
+              let gfmale=document.getElementById("r2");
+              
+
+
+              if(u.length<7 || u.length>12)
+              {
+                  alert("username too small");
+              }
+              else if(p.length<5 || p.length>10)
+              {
+                  alert("password too small");
+                  
+              }
+              else if(p!=cp)
+              {
+                  alert("password dont match");  
+              }
+              else if(/[^a-zA-Z]/.test(fn)  ||  !fn)
+              {
+                  alert("name must be non empty non numberic");  
+              }
+              else if(age<22 || isNaN(age))
+              {
+                  alert("age must be number greater than 22");  
+              }
+              else if(!/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/.test(em) ||  !em)
+              {
+                  alert("enter a valid email");  
+              }
+              else if(isNaN(phone) ||  !phone)
+              {
+                  alert("phone number must be number and cannot be empty");  
+              }
+              else if(!Date.parse(dob) ||  !dob)
+              {
+                  alert("dob must be number and cannot be empty");  
+              }
+              else if(!/[a-zA-Z0-9.]+\.[a-zA-Z0-9._-]+\.[a-zA-Z]/.test(web) ||  !web)
+              {
+                  alert("enter a valid website");  
+              }
+              else if(!country)
+              {
+                  alert("select a country");  
+              }
+              else if(!gmale.checked && !gmale.checked)
+              {
+                  alert("please select gender");  
+              }
+              else if(!check.checked)
+              {
+                  alert("please tick to proceed");  
+              }
+              else
+              alert("Your Data Has Been Validated!!!!");
+          }
+
+      </script>
+
+
+    <script src="./build/bundle.js"></script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>

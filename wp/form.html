@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Sample form</title>
+    <style>
+        div{
+            margin-left:40%;
+            margin-right:40%;
+            
+        }
+        input,textarea{
+            float: right;
+        }
+        label{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div align="center" id="1">
+        <h1 align="center">Sign Up</h1>
+        
+        <hr><hr>
+        <form>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" required placeholder="enter name" id="name"><br><br>
+
+            <label for="pass">Password:</label>
+            <input type="password" required placeholder="enter password" id="pass"><br><br>
+
+            <label for="em">Email:</label>
+            <input type="email" required placeholder="enter email" id="em"><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" required placeholder="enter Phone no." id="phone"><br><br>
+
+            <label for="dob">Dob:</label>
+            <input type="date" id="dob"><br><br>
+            
+
+            <label for="add">Adderss:</label>
+            <textarea cols="20" rows="5" id="add"></textarea><br><br><br><br><br>
+            <label for="loc">Location:</label>
+            <select id="loc">
+                <option value="">choose city</option>
+                <option value="1">Mumbai</option>
+                <option value="2">Chennai</option>
+                <option value="3">Kolkata</option>
+            </select><br><br>
+            <label for="check">I have read the terms and conditions:</label>
+            <input type="checkbox" required><br><br>
+            <button>submit</button>
+
+        </form>
+        <hr><hr>
+    </div>
+    
+    
+</body>
+</html>

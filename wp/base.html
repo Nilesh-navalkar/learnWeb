@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: rgb(16, 138, 57);
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+            position: sticky;
+        }
+
+        nav{
+            background-color: #333;
+            overflow: hidden;
+        }
+        a{
+            float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+        }
+        li{
+            list-style-type: none;
+            display :inline;
+        }
+        li :hover {
+            background-color: gray;
+
+        }
+        footer{
+            background-color: gray;
+
+            float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+            position:fixed;
+            bottom:0;
+            width: 100%;
+        }
+
+        .dropdown-content {
+            margin-top: 44px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float:none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {display: block;}
+    </style>
+    <title>Home page</title>
+
+</head>
+<body>
+    <header> 
+        <h1>home page</h1>
+    </header>
+    <nav>
+        <div> 
+            <ul>
+                <div class="dropdown"><li><a href=""  >Home</a>
+                   
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </li></div>
+                <li><a href="">Discover</a></li>
+                <li><a href="">About us</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <p>
+        </p>
+    </div>
+    <footer> 
+            <p>copyright @ Nilesh Navalkar </p>
+    </footer>
+</body>
+</html>
